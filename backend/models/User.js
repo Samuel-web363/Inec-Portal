@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
   isVerified: { type: Boolean, default: false },
   otpCode: { type: String },
   otpExpiry: { type: Date },
-otpType: { type: String, enum: ['register', 'login', 'reset'] },
+  otpType: { type: String, enum: ['register', 'login', 'reset'] },
   role: { type: String, enum: ['user', 'admin'], default: 'user' },
   isActive: { type: Boolean, default: true },
   lastLogin: { type: Date },
