@@ -11,7 +11,7 @@ async function sendOTPEmail(to, otp, type = 'verify') {
   const action = type === 'login' ? 'complete your login' : 'verify your email address'
 
   await axios.post('https://api.brevo.com/v3/smtp/email', {
-    sender: { name: 'IReV Portal', email: email: 'irevportal@gmail.com' },
+    sender: { name: 'IReV Portal', email: 'irevportal@gmail.com' },
     to: [{ email: to }],
     subject,
     htmlContent: `<div style="font-family:Arial;max-width:520px;margin:0 auto;border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;">
