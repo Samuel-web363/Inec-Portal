@@ -22,18 +22,23 @@ router.post('/register', async (req, res) => {
     const otp = generateOTP()
     const otpExpiry = new Date(Date.now() + OTP_EXPIRY_MINS * 60 * 1000)
 
-    const user = await User.create({
+      const user = await User.create({
       fullName, email: email.toLowerCase(), passwordHash, nin,
       otpCode: otp, otpExpiry, otpType: 'register'
     })
 
-    await sendOTPEmail(email, otp, 'verify')
+    try {
+      await sendOTPEmail(email, otp, 'verify')
+    } catch (emailErr) {
+      console.error('Email error:', emailErr.message)
+    }
     res.status(201).json({ message: 'Registered. Check your email for the verification OTP.' })
   } catch (err) {
     console.error(err)
     res.status(500).json({ message: 'Registration failed' })
   }
 })
+
 
 // POST /api/auth/verify-otp  (registration verification)
 router.post('/verify-otp', async (req, res) => {
