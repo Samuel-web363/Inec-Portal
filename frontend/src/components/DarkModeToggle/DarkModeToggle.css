@@ -1,0 +1,259 @@
+.dmt-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+  flex-shrink: 0;
+}
+
+.dmt-btn:hover { background: rgba(255,255,255,0.22); }
+.dmt-btn--dark { background: rgba(255,255,255,0.2); }
+
+/* ===== DARK THEME ===== */
+html[data-theme="dark"] {
+  --white:       #1e1e2e;
+  --off-white:   #181825;
+  --grey-100:    #2a2a3e;
+  --grey-200:    #363650;
+  --grey-400:    #6e6e8a;
+  --grey-600:    #a0a0bc;
+  --grey-800:    #e0e0f0;
+  --black:       #f0f0ff;
+  --green-pale:  #0d2010;
+  --shadow-sm:   0 1px 4px rgba(0,0,0,0.4);
+  --shadow-md:   0 4px 16px rgba(0,0,0,0.5);
+  --shadow-lg:   0 8px 32px rgba(0,0,0,0.6);
+}
+
+html[data-theme="dark"] body {
+  background-color: var(--off-white);
+  color: var(--grey-800);
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4 {
+  color: var(--grey-800);
+}
+
+html[data-theme="dark"] .sc-card,
+html[data-theme="dark"] .cc-card,
+html[data-theme="dark"] .ad-section,
+html[data-theme="dark"] .res-card,
+html[data-theme="dark"] .cp-card,
+html[data-theme="dark"] .pp-card,
+html[data-theme="dark"] .ae-card,
+html[data-theme="dark"] .el-card,
+html[data-theme="dark"] .vp-candidate-card,
+html[data-theme="dark"] .prof-details-card,
+html[data-theme="dark"] .prof-avatar-card,
+html[data-theme="dark"] .rup-card,
+html[data-theme="dark"] .lp-card,
+html[data-theme="dark"] .rp-card,
+html[data-theme="dark"] .fp-card {
+  background: var(--grey-100) !important;
+  border-color: var(--grey-200) !important;
+}
+
+html[data-theme="dark"] .ad-table,
+html[data-theme="dark"] .um-table,
+html[data-theme="dark"] .alp-table,
+html[data-theme="dark"] .res-table,
+html[data-theme="dark"] .lr-table {
+  background: var(--grey-100) !important;
+}
+
+html[data-theme="dark"] .ad-table tbody tr:hover,
+html[data-theme="dark"] .um-table tbody tr:hover,
+html[data-theme="dark"] .res-table tbody tr:hover {
+  background: var(--grey-200) !important;
+}
+
+html[data-theme="dark"] .sb-sidebar {
+  background: var(--grey-100) !important;
+  border-color: var(--grey-200) !important;
+}
+
+html[data-theme="dark"] .sb-link:hover,
+html[data-theme="dark"] .sb-link--active {
+  background: var(--grey-200) !important;
+}
+
+html[data-theme="dark"] .lp-input,
+html[data-theme="dark"] .rp-input,
+html[data-theme="dark"] .fp-input,
+html[data-theme="dark"] .res-search,
+html[data-theme="dark"] .res-filter-input,
+html[data-theme="dark"] .cp-input,
+html[data-theme="dark"] .pp-input,
+html[data-theme="dark"] .rup-input,
+html[data-theme="dark"] .ae-input,
+html[data-theme="dark"] .um-search,
+html[data-theme="dark"] .alp-search,
+html[data-theme="dark"] .cp-search,
+html[data-theme="dark"] .pp-search {
+  background: var(--grey-200) !important;
+  border-color: var(--grey-400) !important;
+  color: var(--grey-800) !important;
+}
+
+html[data-theme="dark"] .ud-welcome,
+html[data-theme="dark"] .ad-banner + div,
+html[data-theme="dark"] .res-mobile-bar {
+  background: var(--grey-100) !important;
+}
+
+html[data-theme="dark"] .hp-features,
+html[data-theme="dark"] .hp-feat-card {
+  background: var(--grey-100) !important;
+}
+
+html[data-theme="dark"] .res-table thead,
+html[data-theme="dark"] .ad-table thead,
+html[data-theme="dark"] .um-table thead,
+html[data-theme="dark"] .alp-table thead,
+html[data-theme="dark"] .lr-table thead {
+  background: var(--green-dark) !important;
+}
+
+html[data-theme="dark"] .otp-modal,
+html[data-theme="dark"] .cp-modal,
+html[data-theme="dark"] .pp-modal,
+html[data-theme="dark"] .ae-modal {
+  background: var(--grey-100) !important;
+}
+
+html[data-theme="dark"] .otp-input {
+  background: var(--grey-200) !important;
+  border-color: var(--grey-400) !important;
+  color: var(--grey-800) !important;
+}
+
+/* ===== BROAD DARK MODE COVERAGE ===== */
+/* All white-background cards/sections across the app */
+html[data-theme="dark"] .ab-section,
+html[data-theme="dark"] .adv-section,
+html[data-theme="dark"] .ae-card,
+html[data-theme="dark"] .ae-modal,
+html[data-theme="dark"] .an-chart-card,
+html[data-theme="dark"] .an-kpi,
+html[data-theme="dark"] .an-section,
+html[data-theme="dark"] .cc-card,
+html[data-theme="dark"] .cp-card,
+html[data-theme="dark"] .cp-modal,
+html[data-theme="dark"] .el-card,
+html[data-theme="dark"] .el-empty,
+html[data-theme="dark"] .fp-card,
+html[data-theme="dark"] .gs-input,
+html[data-theme="dark"] .gs-dropdown,
+html[data-theme="dark"] .hp-feat-card,
+html[data-theme="dark"] .lp-card,
+html[data-theme="dark"] .lr-chart-card,
+html[data-theme="dark"] .lr-no-votes,
+html[data-theme="dark"] .lr-winner-card,
+html[data-theme="dark"] .lr-section,
+html[data-theme="dark"] .notif-dropdown,
+html[data-theme="dark"] .otp-modal,
+html[data-theme="dark"] .pp-card,
+html[data-theme="dark"] .pp-modal,
+html[data-theme="dark"] .res-card,
+html[data-theme="dark"] .res-empty,
+html[data-theme="dark"] .res-export-btn,
+html[data-theme="dark"] .res-filters,
+html[data-theme="dark"] .res-mobile-bar,
+html[data-theme="dark"] .res-table,
+html[data-theme="dark"] .rp-card,
+html[data-theme="dark"] .rup-card,
+html[data-theme="dark"] .sb-sidebar,
+html[data-theme="dark"] .sd-arch-box,
+html[data-theme="dark"] .sd-feature,
+html[data-theme="dark"] .sd-field,
+html[data-theme="dark"] .sd-nav,
+html[data-theme="dark"] .sd-role-card,
+html[data-theme="dark"] .sc-card,
+html[data-theme="dark"] .um-table,
+html[data-theme="dark"] .alp-table,
+html[data-theme="dark"] .vc-card,
+html[data-theme="dark"] .vc-info,
+html[data-theme="dark"] .vp-candidate-card,
+html[data-theme="dark"] .vp-confirm-box,
+html[data-theme="dark"] .vp-header,
+html[data-theme="dark"] .ad-section,
+html[data-theme="dark"] .ad-seed-card,
+html[data-theme="dark"] .ud-welcome,
+html[data-theme="dark"] .prof-details-card,
+html[data-theme="dark"] .prof-avatar-card {
+  background: var(--white) !important;
+  border-color: var(--grey-200) !important;
+  color: var(--grey-800);
+}
+
+/* Body text inherits dark color */
+html[data-theme="dark"] p,
+html[data-theme="dark"] span,
+html[data-theme="dark"] label,
+html[data-theme="dark"] li,
+html[data-theme="dark"] td,
+html[data-theme="dark"] th,
+html[data-theme="dark"] div {
+  color: inherit;
+}
+
+/* Page wrappers and main backgrounds */
+html[data-theme="dark"] .page-main-content,
+html[data-theme="dark"] .res-page,
+html[data-theme="dark"] .an-page,
+html[data-theme="dark"] .vc-page,
+html[data-theme="dark"] .adv-page,
+html[data-theme="dark"] .sd-page,
+html[data-theme="dark"] .ud-page,
+html[data-theme="dark"] .ad-page,
+html[data-theme="dark"] .lr-page,
+html[data-theme="dark"] .el-page,
+html[data-theme="dark"] .vp-page,
+html[data-theme="dark"] .hp-page {
+  background: var(--off-white);
+  color: var(--grey-800);
+}
+
+/* Inputs everywhere */
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select {
+  background: var(--grey-200) !important;
+  border-color: var(--grey-400) !important;
+  color: var(--grey-800) !important;
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+  color: var(--grey-400) !important;
+}
+
+/* Table header stays green for branding */
+html[data-theme="dark"] thead {
+  background: var(--green-dark) !important;
+}
+html[data-theme="dark"] thead th {
+  color: var(--white) !important;
+}
+
+/* Hover states on table rows */
+html[data-theme="dark"] tbody tr:hover {
+  background: var(--grey-200) !important;
+}
+
+/* Links / chips that were light backgrounds */
+html[data-theme="dark"] .res-party-badge,
+html[data-theme="dark"] .an-party-tag,
+html[data-theme="dark"] .gs-item-icon--candidate,
+html[data-theme="dark"] .notif-item--election .notif-item-icon {
+  background: rgba(0,100,0,0.25) !important;
+  color: #69f0ae !important;
+}

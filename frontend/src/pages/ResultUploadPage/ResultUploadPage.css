@@ -1,0 +1,36 @@
+.rup-page { min-height: 100vh; display: flex; flex-direction: column; }
+.rup-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
+.rup-title { font-size: 1.6rem; color: var(--grey-800); font-family: var(--font-heading); }
+.rup-sub { font-size: 0.85rem; color: var(--grey-600); margin-top: 4px; }
+.rup-back-btn { display: flex; align-items: center; gap: 6px; padding: 9px 16px; background: var(--grey-100); border-radius: var(--radius-sm); font-size: 0.875rem; color: var(--grey-700); min-height: 40px; transition: background var(--transition); }
+.rup-back-btn:hover { background: var(--grey-200); }
+.rup-card { background: var(--white); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-sm); max-width: 820px; }
+.rup-success { display: flex; align-items: center; gap: 8px; background: #e8f5e9; color: #2e7d32; padding: 12px 16px; border-radius: var(--radius-sm); font-size: 0.875rem; margin-bottom: 20px; }
+.rup-error { display: flex; align-items: center; gap: 8px; background: #fdecea; color: var(--red); padding: 12px 16px; border-radius: var(--radius-sm); font-size: 0.875rem; margin-bottom: 20px; }
+.rup-form { display: flex; flex-direction: column; gap: 20px; }
+.rup-section-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--green-dark); border-bottom: 1.5px solid var(--green-pale); padding-bottom: 6px; }
+.rup-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.rup-grid--narrow { grid-template-columns: 1fr 1fr; }
+.rup-field { display: flex; flex-direction: column; gap: 6px; }
+.rup-label { font-size: 0.82rem; font-weight: 600; color: var(--grey-800); }
+.rup-required { color: var(--red); }
+.rup-input, .rup-select { padding: 10px 12px; border: 1.5px solid var(--grey-200); border-radius: var(--radius-sm); font-size: 0.9rem; outline: none; color: var(--grey-800); background: var(--off-white); min-height: 42px; transition: border-color var(--transition); width: 100%; font-family: var(--font-body); }
+.rup-input:focus, .rup-select:focus { border-color: var(--green-dark); background: var(--white); }
+.rup-field--checkbox { justify-content: center; }
+.rup-checkbox-label { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.rup-checkbox { width: 18px; height: 18px; accent-color: var(--green-dark); cursor: pointer; }
+.rup-checkbox-text { font-size: 0.9rem; font-weight: 600; color: var(--grey-800); }
+.rup-hint { font-size: 0.75rem; color: var(--grey-400); margin-top: 2px; }
+.rup-actions { display: flex; justify-content: flex-end; gap: 12px; padding-top: 8px; border-top: 1px solid var(--grey-100); }
+.rup-reset-btn { padding: 10px 20px; background: var(--grey-100); border-radius: var(--radius-md); font-size: 0.875rem; color: var(--grey-700); min-height: 44px; transition: background var(--transition); }
+.rup-reset-btn:hover { background: var(--grey-200); }
+.rup-submit { display: flex; align-items: center; gap: 8px; padding: 10px 24px; background: var(--green-dark); color: var(--white); border-radius: var(--radius-md); font-size: 0.95rem; font-weight: 600; min-height: 44px; transition: background var(--transition), opacity var(--transition); }
+.rup-submit:hover:not(:disabled) { background: var(--green-mid); }
+.rup-submit:disabled { opacity: 0.55; cursor: not-allowed; }
+.rup-spinner { width: 20px; height: 20px; border: 2px solid rgba(255,255,255,0.35); border-top-color: var(--white); border-radius: 50%; animation: rup-spin 0.7s linear infinite; display: inline-block; }
+@keyframes rup-spin { to { transform: rotate(360deg); } }
+@media (max-width: 640px) {
+  .rup-grid { grid-template-columns: 1fr !important; }
+  .rup-grid--narrow { grid-template-columns: 1fr !important; }
+  .rup-card { padding: 20px 16px; }
+}

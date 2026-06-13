@@ -1,0 +1,39 @@
+.el-page { min-height: 100vh; display: flex; flex-direction: column; }
+.el-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 28px; flex-wrap: wrap; gap: 14px; }
+.el-title { font-size: 1.6rem; color: var(--grey-800); font-family: var(--font-heading); }
+.el-sub { font-size: 0.875rem; color: var(--grey-600); margin-top: 4px; }
+.el-manage-btn { display: flex; align-items: center; gap: 7px; padding: 10px 18px; background: var(--grey-100); color: var(--grey-700); border-radius: var(--radius-md); font-size: 0.875rem; font-weight: 600; min-height: 44px; transition: background var(--transition); white-space: nowrap; }
+.el-manage-btn:hover { background: var(--grey-200); }
+.el-error { background: #fdecea; color: var(--red); padding: 16px; border-radius: var(--radius-md); }
+.el-empty { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 80px 24px; background: var(--white); border-radius: var(--radius-lg); text-align: center; color: var(--grey-400); }
+.el-empty h3 { font-size: 1.1rem; color: var(--grey-600); }
+.el-empty p { font-size: 0.875rem; }
+.el-create-link { color: var(--green-dark); font-weight: 600; text-decoration: underline; margin-top: 8px; }
+.el-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+.el-card { background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); overflow: hidden; transition: box-shadow var(--transition), transform var(--transition); display: flex; flex-direction: column; }
+.el-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.el-card-stripe { height: 5px; }
+.el-card-stripe--open { background: linear-gradient(90deg, var(--green-dark), #69f0ae); }
+.el-card-stripe--closed { background: var(--grey-300); }
+.el-card-stripe--upcoming { background: linear-gradient(90deg, var(--gold), #ffe082); }
+.el-card-body { padding: 22px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.el-card-top { display: flex; align-items: center; justify-content: space-between; }
+.el-type-tag { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: var(--grey-100); color: var(--grey-600); padding: 3px 10px; border-radius: 999px; }
+.el-status { font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; }
+.el-status--open { background: #e8f5e9; color: #2e7d32; }
+.el-status--closed { background: var(--grey-100); color: var(--grey-600); }
+.el-status--upcoming { background: #fff8e1; color: #f57f17; }
+.el-card-title { font-size: 1.05rem; font-weight: 700; color: var(--grey-800); font-family: var(--font-heading); line-height: 1.3; }
+.el-card-desc { font-size: 0.82rem; color: var(--grey-600); line-height: 1.5; }
+.el-card-stats { display: flex; gap: 16px; }
+.el-stat { display: flex; align-items: center; gap: 5px; font-size: 0.8rem; color: var(--grey-600); }
+.el-live-bar { display: flex; align-items: center; gap: 7px; background: #e8f5e9; border-radius: var(--radius-sm); padding: 7px 12px; font-size: 0.8rem; font-weight: 600; color: #2e7d32; }
+.el-live-dot { width: 7px; height: 7px; background: #2e7d32; border-radius: 50%; animation: el-pulse 1.5s ease-in-out infinite; flex-shrink: 0; }
+@keyframes el-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+.el-card-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; padding-top: 4px; }
+.el-vote-btn { display: flex; align-items: center; gap: 6px; padding: 9px 16px; background: var(--green-dark); color: var(--white); border-radius: var(--radius-md); font-size: 0.85rem; font-weight: 600; min-height: 40px; transition: background var(--transition); }
+.el-vote-btn:hover { background: var(--green-mid); }
+.el-results-btn { display: flex; align-items: center; gap: 6px; padding: 9px 14px; background: var(--green-pale); color: var(--green-dark); border-radius: var(--radius-md); font-size: 0.85rem; font-weight: 600; min-height: 40px; transition: background var(--transition); }
+.el-results-btn:hover { background: var(--grey-200); }
+.el-view-btn { padding: 9px 14px; background: var(--grey-100); color: var(--grey-600); border-radius: var(--radius-md); font-size: 0.85rem; font-weight: 500; min-height: 40px; display: flex; align-items: center; }
+@media (max-width: 640px) { .el-grid { grid-template-columns: 1fr !important; } }

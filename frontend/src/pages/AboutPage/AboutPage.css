@@ -1,0 +1,42 @@
+.ab-page { min-height: 100vh; display: flex; flex-direction: column; background: var(--off-white); }
+.ab-hero { background: var(--green-dark); padding: 48px 24px; }
+.ab-hero-inner { max-width: 860px; margin: 0 auto; }
+.ab-hero-title { font-size: 2rem; color: var(--white); font-family: var(--font-heading); margin-bottom: 10px; }
+.ab-hero-sub { font-size: 1rem; color: rgba(255,255,255,0.7); }
+.ab-content { max-width: 860px; margin: 0 auto; padding: 40px 24px; flex: 1; }
+.ab-notice { background: #fff8e1; border-left: 4px solid var(--gold); border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 32px; display: flex; gap: 12px; align-items: flex-start; font-size: 0.875rem; color: var(--grey-700); line-height: 1.6; }
+.ab-notice-icon { color: var(--gold); flex-shrink: 0; margin-top: 1px; }
+.ab-grid { display: flex; flex-direction: column; gap: 36px; }
+.ab-section { background: var(--white); border-radius: var(--radius-lg); padding: 28px 32px; box-shadow: var(--shadow-sm); }
+.ab-section-title { font-size: 1.1rem; font-weight: 700; color: var(--grey-800); font-family: var(--font-heading); margin-bottom: 16px; border-bottom: 2px solid var(--green-pale); padding-bottom: 10px; }
+.ab-section p { font-size: 0.95rem; color: var(--grey-700); line-height: 1.75; margin-bottom: 12px; }
+.ab-section p:last-child { margin-bottom: 0; }
+.ab-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.ab-list-item { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--grey-700); }
+.ab-list-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green-dark); flex-shrink: 0; margin-top: 6px; }
+.ab-tech-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.ab-tech-card { background: var(--off-white); border-radius: var(--radius-md); padding: 16px; }
+.ab-tech-title { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--green-dark); margin-bottom: 10px; }
+.ab-tech-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.ab-tech-item { display: flex; align-items: center; gap: 7px; font-size: 0.85rem; color: var(--grey-700); }
+.ab-tech-item svg { color: var(--green-dark); flex-shrink: 0; }
+.ab-steps { display: flex; flex-direction: column; gap: 20px; }
+.ab-step { display: flex; gap: 16px; align-items: flex-start; }
+.ab-step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--green-dark); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; flex-shrink: 0; font-family: var(--font-heading); }
+.ab-step-title { font-size: 0.95rem; font-weight: 700; color: var(--grey-800); margin-bottom: 4px; }
+.ab-step-desc { font-size: 0.875rem; color: var(--grey-600); line-height: 1.6; }
+.ab-cta { background: var(--green-dark); border-radius: var(--radius-lg); padding: 40px 32px; text-align: center; margin-top: 40px; }
+.ab-cta-title { font-size: 1.5rem; color: var(--white); font-family: var(--font-heading); margin-bottom: 8px; }
+.ab-cta-sub { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 24px; }
+.ab-cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.ab-cta-primary { padding: 12px 28px; background: var(--gold); color: var(--grey-800); border-radius: var(--radius-md); font-weight: 700; font-size: 0.95rem; transition: opacity var(--transition); min-height: 44px; display: inline-flex; align-items: center; }
+.ab-cta-primary:hover { opacity: 0.88; }
+.ab-cta-secondary { padding: 12px 28px; border: 2px solid rgba(255,255,255,0.5); color: var(--white); border-radius: var(--radius-md); font-weight: 600; font-size: 0.95rem; transition: all var(--transition); min-height: 44px; display: inline-flex; align-items: center; }
+.ab-cta-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+.ab-footer { background: var(--grey-800); padding: 20px 24px; text-align: center; margin-top: auto; }
+.ab-footer-inner { max-width: 860px; margin: 0 auto; font-size: 0.78rem; color: var(--grey-400); }
+@media (max-width: 640px) {
+  .ab-tech-grid { grid-template-columns: 1fr !important; }
+  .ab-section { padding: 20px 16px; }
+  .ab-cta { padding: 28px 20px; }
+}

@@ -1,0 +1,28 @@
+.um-page { min-height: 100vh; display: flex; flex-direction: column; }
+.um-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 14px; }
+.um-title { font-size: 1.6rem; color: var(--grey-800); font-family: var(--font-heading); }
+.um-sub { font-size: 0.85rem; color: var(--grey-600); margin-top: 4px; }
+.um-search-wrap { position: relative; }
+.um-search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--grey-400); display: flex; pointer-events: none; }
+.um-search { padding: 9px 12px 9px 32px; border: 1.5px solid var(--grey-200); border-radius: var(--radius-md); font-size: 0.875rem; outline: none; color: var(--grey-800); min-height: 44px; width: 240px; }
+.um-search:focus { border-color: var(--green-dark); }
+.um-error { color: var(--red); background: #fdecea; padding: 16px; border-radius: var(--radius-md); }
+.um-table-wrap { overflow-x: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+.um-table { width: 100%; border-collapse: collapse; background: var(--white); font-size: 0.875rem; min-width: 860px; }
+.um-table thead { background: var(--green-dark); }
+.um-table thead th { padding: 13px 16px; text-align: left; color: var(--white); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+.um-table tbody tr { border-bottom: 1px solid var(--grey-100); transition: background var(--transition); }
+.um-table tbody tr:hover { background: var(--green-pale); }
+.um-table tbody td { padding: 12px 16px; color: var(--grey-700); vertical-align: middle; }
+.um-name { font-weight: 600; color: var(--grey-800) !important; }
+.um-empty { text-align: center; padding: 24px; color: var(--grey-400); }
+.um-badge { padding: 3px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
+.um-badge--yes    { background: #e8f5e9; color: #2e7d32; }
+.um-badge--no     { background: #fff8e1; color: #f57f17; }
+.um-badge--active   { background: #e8f5e9; color: #2e7d32; }
+.um-badge--inactive { background: #fdecea; color: var(--red); }
+.um-deact-btn { display: flex; align-items: center; gap: 5px; padding: 6px 12px; background: #fdecea; color: var(--red); border-radius: var(--radius-sm); font-size: 0.78rem; font-weight: 600; transition: background var(--transition); min-height: 32px; white-space: nowrap; }
+.um-deact-btn:hover:not(:disabled) { background: #fcc; }
+.um-deact-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.um-deact-label { font-size: 0.78rem; color: var(--grey-400); font-style: italic; }
+@media (max-width: 600px) { .um-search { width: 180px !important; } }

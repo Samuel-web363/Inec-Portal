@@ -1,0 +1,107 @@
+.vc-page { min-height: 100vh; display: flex; flex-direction: column; }
+.vc-header { display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px; }
+.vc-title { font-size: 1.5rem; color: var(--grey-800); font-family: var(--font-heading); }
+.vc-sub { font-size: 0.85rem; color: var(--grey-600); margin-top: 4px; }
+.vc-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.vc-print-btn, .vc-download-btn {
+  display: flex; align-items: center; gap: 7px;
+  padding: 10px 18px; border-radius: var(--radius-md);
+  font-size: 0.85rem; font-weight: 600; min-height: 44px;
+  transition: all var(--transition); flex: 1; justify-content: center;
+}
+.vc-print-btn { background: var(--grey-100); color: var(--grey-700); }
+.vc-print-btn:hover { background: var(--grey-200); }
+.vc-download-btn { background: var(--green-dark); color: var(--white); }
+.vc-download-btn:hover:not(:disabled) { background: var(--green-mid); }
+.vc-download-btn:disabled { opacity: 0.6; }
+
+.vc-notice {
+  display: flex; align-items: center; gap: 10px;
+  background: #e3f2fd; color: #1565c0;
+  padding: 12px 16px; border-radius: var(--radius-md);
+  font-size: 0.82rem; line-height: 1.5; margin-bottom: 20px;
+}
+.vc-notice svg { flex-shrink: 0; }
+
+.vc-layout { display: flex; flex-direction: column; gap: 24px; }
+
+/* ── Card ── */
+.vc-card-wrap { display: flex; justify-content: center; }
+.vc-card {
+  width: 100%; max-width: 360px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--grey-200);
+}
+.vc-card-header {
+  background: var(--green-dark);
+  padding: 14px 18px;
+  display: flex; align-items: center; gap: 12px;
+}
+.vc-card-logo { flex-shrink: 0; }
+.vc-card-header-text { display: flex; flex-direction: column; }
+.vc-card-heading { font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700; color: var(--white); }
+.vc-card-sub { font-size: 0.68rem; color: rgba(255,255,255,0.7); margin-top: 2px; }
+.vc-gold-stripe { height: 4px; background: var(--gold); }
+.vc-card-body { padding: 18px; }
+.vc-card-row { display: flex; gap: 14px; margin-bottom: 14px; }
+.vc-photo {
+  width: 78px; height: 94px; flex-shrink: 0;
+  background: var(--green-pale);
+  border: 2px solid var(--green-dark);
+  border-radius: 6px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+}
+.vc-photo-label { font-size: 0.6rem; font-weight: 700; color: var(--green-dark); letter-spacing: 0.05em; }
+.vc-fields { flex: 1; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.vc-field { display: flex; flex-direction: column; gap: 1px; }
+.vc-field-label { font-size: 0.62rem; color: var(--grey-400); text-transform: uppercase; letter-spacing: 0.06em; }
+.vc-field-value { font-size: 0.88rem; font-weight: 700; color: var(--grey-800); font-family: var(--font-heading); }
+.vc-field-value--sm { font-size: 0.72rem; word-break: break-all; }
+.vc-vin {
+  background: var(--off-white);
+  border: 1.5px solid var(--green-dark);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px; margin-bottom: 14px; text-align: center;
+}
+.vc-vin-label { display: block; font-size: 0.62rem; color: var(--green-dark); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 4px; }
+.vc-vin-number { font-size: 1.1rem; font-weight: 900; color: var(--grey-800); letter-spacing: 0.08em; font-family: monospace; }
+.vc-card-footer {
+  background: var(--green-dark); padding: 10px 18px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.vc-footer-text { color: rgba(255,255,255,0.8); font-size: 0.68rem; }
+.vc-demo-badge { background: var(--gold); color: var(--grey-800); padding: 3px 10px; border-radius: 3px; font-size: 0.65rem; font-weight: 700; }
+.vc-disclaimer-strip {
+  background: var(--green-dark); color: var(--gold);
+  text-align: center; font-size: 0.62rem; font-style: italic;
+  padding: 6px 12px 10px; border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+/* ── Info panel ── */
+.vc-info { background: var(--white); border-radius: var(--radius-lg); padding: 20px; box-shadow: var(--shadow-sm); }
+.vc-info-title { font-size: 1rem; font-weight: 700; color: var(--grey-800); font-family: var(--font-heading); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid var(--green-pale); }
+.vc-info-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.vc-info-item { display: flex; justify-content: space-between; gap: 10px; font-size: 0.85rem; padding-bottom: 8px; border-bottom: 1px solid var(--grey-100); }
+.vc-info-label { color: var(--grey-600); font-weight: 600; flex-shrink: 0; }
+.vc-info-value { color: var(--grey-800); text-align: right; word-break: break-all; }
+.vc-usage { background: var(--off-white); border-radius: var(--radius-md); padding: 14px; }
+.vc-usage-title { font-size: 0.85rem; font-weight: 700; color: var(--grey-800); margin-bottom: 6px; }
+.vc-usage p { font-size: 0.8rem; color: var(--grey-600); line-height: 1.6; }
+
+@media (min-width: 900px) {
+  .vc-header { flex-direction: row; align-items: flex-start; justify-content: space-between; }
+  .vc-actions { flex-shrink: 0; }
+  .vc-print-btn, .vc-download-btn { flex: none; }
+  .vc-layout { flex-direction: row; align-items: flex-start; }
+  .vc-card-wrap { flex: 1; }
+  .vc-info { flex: 1; max-width: 380px; }
+}
+
+/* Print styles */
+@media print {
+  .nav-header, .sb-sidebar, .vc-header, .vc-notice, .vc-info, .ft-footer { display: none !important; }
+  .vc-card-wrap { margin: 0 auto; }
+}

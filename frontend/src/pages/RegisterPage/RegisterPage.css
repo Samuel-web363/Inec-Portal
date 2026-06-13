@@ -1,0 +1,24 @@
+.rp-page { min-height: 100vh; display: flex; flex-direction: column; background: var(--off-white); }
+.rp-main { flex: 1; display: flex; align-items: flex-start; justify-content: center; padding: 40px 16px; background: linear-gradient(135deg, var(--green-pale) 0%, var(--off-white) 60%); }
+.rp-card { background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); padding: 40px 36px; width: 100%; max-width: 480px; border-top: 4px solid var(--green-dark); }
+.rp-card-header { text-align: center; margin-bottom: 28px; }
+.rp-logo { margin: 0 auto 16px; display: flex; justify-content: center; }
+.rp-title { font-size: 1.6rem; color: var(--grey-800); margin-bottom: 6px; }
+.rp-sub { font-size: 0.875rem; color: var(--grey-600); }
+.rp-error { display: flex; align-items: center; gap: 8px; background: #fdecea; color: var(--red); border-radius: var(--radius-sm); padding: 10px 14px; font-size: 0.875rem; margin-bottom: 20px; }
+.rp-form { display: flex; flex-direction: column; gap: 16px; }
+.rp-field { display: flex; flex-direction: column; gap: 6px; }
+.rp-label { font-size: 0.85rem; font-weight: 600; color: var(--grey-800); }
+.rp-input-wrap { position: relative; }
+.rp-input-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--grey-400); display: flex; align-items: center; pointer-events: none; }
+.rp-input { width: 100%; padding: 11px 14px 11px 38px; border: 1.5px solid var(--grey-200); border-radius: var(--radius-md); font-size: 0.95rem; color: var(--grey-800); background: var(--off-white); transition: border-color var(--transition); outline: none; min-height: 44px; }
+.rp-input:focus { border-color: var(--green-dark); background: var(--white); }
+.rp-submit { width: 100%; height: 48px; background: var(--green-dark); color: var(--white); border-radius: var(--radius-md); font-size: 1rem; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background var(--transition), opacity var(--transition); margin-top: 6px; }
+.rp-submit:hover:not(:disabled) { background: var(--green-mid); }
+.rp-submit:disabled { opacity: 0.55; cursor: not-allowed; }
+.rp-spinner { width: 20px; height: 20px; border: 2px solid rgba(255,255,255,0.35); border-top-color: var(--white); border-radius: 50%; animation: rp-spin 0.7s linear infinite; display: inline-block; }
+@keyframes rp-spin { to { transform: rotate(360deg); } }
+.rp-login-link { text-align: center; margin-top: 20px; font-size: 0.9rem; color: var(--grey-600); }
+.rp-link { color: var(--green-dark); font-weight: 600; text-decoration: underline; }
+.rp-link:hover { color: var(--green-mid); }
+@media (max-width: 480px) { .rp-card { padding: 28px 20px; } }

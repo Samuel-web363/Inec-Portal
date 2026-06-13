@@ -1,0 +1,150 @@
+.otp-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+  animation: otp-fade 0.2s ease;
+}
+
+@keyframes otp-fade { from { opacity: 0; } to { opacity: 1; } }
+
+.otp-modal {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  animation: otp-slide 0.25s ease;
+}
+
+@keyframes otp-slide {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.otp-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--green-pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--green-dark);
+}
+
+.otp-title {
+  font-size: 1.4rem;
+  color: var(--grey-800);
+  margin-bottom: 10px;
+}
+
+.otp-desc {
+  font-size: 0.9rem;
+  color: var(--grey-600);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.otp-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fdecea;
+  color: var(--red);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.otp-inputs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.otp-input {
+  width: 48px;
+  height: 58px;
+  border: 2px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--grey-800);
+  transition: border-color var(--transition), background var(--transition);
+  outline: none;
+  background: var(--off-white);
+}
+
+.otp-input:focus {
+  border-color: var(--green-dark);
+  background: var(--white);
+}
+
+.otp-input--filled {
+  border-color: var(--green-mid);
+  background: var(--green-pale);
+}
+
+.otp-submit {
+  width: 100%;
+  height: 48px;
+  background: var(--green-dark);
+  color: var(--white);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background var(--transition), opacity var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.otp-submit:hover:not(:disabled) { background: var(--green-mid); }
+.otp-submit:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.otp-btn-spinner {
+  width: 20px; height: 20px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: var(--white);
+  border-radius: 50%;
+  animation: otp-spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes otp-spin { to { transform: rotate(360deg); } }
+
+.otp-resend {
+  margin-top: 16px;
+  font-size: 0.875rem;
+}
+
+.otp-resend-btn {
+  background: none;
+  color: var(--green-dark);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.otp-resend-btn:hover { color: var(--green-mid); }
+
+.otp-countdown { color: var(--grey-400); }
+
+@media (max-width: 480px) {
+  .otp-modal { padding: 28px 20px; }
+  .otp-input { width: 42px; height: 52px; font-size: 1.3rem; }
+  .otp-inputs { gap: 8px; }
+}

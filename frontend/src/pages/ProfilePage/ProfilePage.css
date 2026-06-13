@@ -1,0 +1,42 @@
+.prof-page { min-height: 100vh; display: flex; flex-direction: column; }
+.prof-title { font-size: 1.6rem; color: var(--grey-800); font-family: var(--font-heading); margin-bottom: 24px; }
+.prof-layout { display: grid; grid-template-columns: 280px 1fr; gap: 24px; align-items: flex-start; }
+
+/* Avatar card */
+.prof-avatar-card { background: var(--white); border-radius: var(--radius-lg); padding: 32px 24px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+.prof-avatar { width: 88px; height: 88px; background: var(--green-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--green-dark); }
+.prof-name { font-size: 1.1rem; font-weight: 700; color: var(--grey-800); font-family: var(--font-heading); }
+.prof-role-badge { padding: 4px 14px; border-radius: 999px; font-size: 0.78rem; font-weight: 600; background: var(--green-pale); color: var(--green-dark); }
+.prof-role-badge--admin { background: #fff3e0; color: #e65100; }
+.prof-meta-list { display: flex; flex-direction: column; gap: 10px; width: 100%; margin-top: 8px; border-top: 1px solid var(--grey-100); padding-top: 16px; }
+.prof-meta-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--grey-600); }
+
+/* Details card */
+.prof-details-card { background: var(--white); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); }
+.prof-details-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.prof-details-title { font-size: 1rem; font-weight: 700; color: var(--grey-800); font-family: var(--font-heading); }
+.prof-edit-btn { display: flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--green-pale); color: var(--green-dark); border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600; transition: background var(--transition); min-height: 36px; }
+.prof-edit-btn:hover { background: var(--grey-200); }
+.prof-success { background: #e8f5e9; color: #2e7d32; padding: 10px 14px; border-radius: var(--radius-sm); font-size: 0.875rem; margin-bottom: 16px; }
+.prof-error { background: #fdecea; color: var(--red); padding: 10px 14px; border-radius: var(--radius-sm); font-size: 0.875rem; margin-bottom: 16px; }
+.prof-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.prof-info-item { display: flex; flex-direction: column; gap: 4px; }
+.prof-info-label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--grey-400); }
+.prof-info-value { font-size: 0.95rem; color: var(--grey-800); font-weight: 500; }
+/* Form */
+.prof-form { display: flex; flex-direction: column; gap: 16px; }
+.prof-field { display: flex; flex-direction: column; gap: 5px; }
+.prof-label { font-size: 0.82rem; font-weight: 600; color: var(--grey-800); }
+.prof-input { padding: 10px 12px; border: 1.5px solid var(--grey-200); border-radius: var(--radius-sm); font-size: 0.9rem; outline: none; color: var(--grey-800); min-height: 42px; transition: border-color var(--transition); }
+.prof-input:focus { border-color: var(--green-dark); }
+.prof-input--disabled { background: var(--grey-100); color: var(--grey-400); cursor: not-allowed; }
+.prof-hint { font-size: 0.75rem; color: var(--grey-400); }
+.prof-form-btns { display: flex; gap: 10px; margin-top: 4px; }
+.prof-cancel-btn { padding: 9px 18px; background: var(--grey-100); border-radius: var(--radius-sm); font-size: 0.875rem; color: var(--grey-700); min-height: 40px; }
+.prof-save-btn { padding: 9px 22px; background: var(--green-dark); color: var(--white); border-radius: var(--radius-sm); font-size: 0.875rem; font-weight: 600; min-height: 40px; transition: background var(--transition); }
+.prof-save-btn:hover:not(:disabled) { background: var(--green-mid); }
+.prof-save-btn:disabled { opacity: 0.55; }
+@media (max-width: 900px) {
+  .prof-layout { grid-template-columns: 1fr !important; }
+  .prof-info-grid { grid-template-columns: 1fr !important; }
+}
