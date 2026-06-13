@@ -17,12 +17,13 @@ const app = express()
 // CORS
 app.use(cors({
   origin: [
-    process.env.CLIENT_URL,
+    'https://inec-portal.vercel.app',
     'http://localhost:5173',
     'http://localhost:3000'
   ],
   credentials: true
 }))
+
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
