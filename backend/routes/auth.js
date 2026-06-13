@@ -81,8 +81,13 @@ router.post('/login', async (req, res) => {
     user.otpType = 'login'
     await user.save()
 
-    await sendOTPEmail(email, otp, 'login')
-    res.json({ message: 'OTP sent to your email. Enter it to complete login.' })
+    try {
+  await sendOTPEmail(email, otp, 'login')
+} catch (emailErr) {
+  console.error('Email error:', emailErr.message)
+}
+res.json({ message: 'OTP sent to your email. Enter it to complete login.' })
+
   } catch (err) {
     console.error(err)
     res.status(500).json({ message: 'Login failed' })
