@@ -11,7 +11,7 @@ async function sendOTPEmail(to, otp, type = 'verify') {
   const action = type === 'login' ? 'complete your login' : 'verify your email address'
 
   await axios.post('https://api.brevo.com/v3/smtp/email', {
-    sender: { name: 'IReV Portal', email: 'aea429001@smtp-brevo.com' },
+    sender: { name: 'IReV Portal', email: email: 'irevportal@gmail.com' },
     to: [{ email: to }],
     subject,
     htmlContent: `<div style="font-family:Arial;max-width:520px;margin:0 auto;border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;">
@@ -36,7 +36,7 @@ async function sendOTPEmail(to, otp, type = 'verify') {
 
 async function sendVotingOpenEmail(to, fullName, election) {
   await axios.post('https://api.brevo.com/v3/smtp/email', {
-    sender: { name: 'IReV Portal', email: 'aea429001@smtp-brevo.com' },
+    sender: { name: 'IReV Portal', email: email: 'irevportal@gmail.com' },
     to: [{ email: to }],
     subject: `🗳️ Voting is Now Open: ${election.title}`,
     htmlContent: `<p>Dear ${fullName}, voting is now open for <strong>${election.title}</strong>.</p>`
@@ -45,7 +45,7 @@ async function sendVotingOpenEmail(to, fullName, election) {
 
 async function sendResultUploadEmail(to, fullName, result) {
   await axios.post('https://api.brevo.com/v3/smtp/email', {
-    sender: { name: 'IReV Portal', email: 'aea429001@smtp-brevo.com' },
+    sender: { name: 'IReV Portal', email: email: 'irevportal@gmail.com' },
     to: [{ email: to }],
     subject: `📊 New Result Published: ${result.electionType} — ${result.state}`,
     htmlContent: `<p>Dear ${fullName}, a new result has been published for <strong>${result.electionType}</strong> in ${result.state}.</p>`
