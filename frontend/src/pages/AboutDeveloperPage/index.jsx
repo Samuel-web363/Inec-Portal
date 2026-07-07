@@ -29,7 +29,7 @@ export default function AboutDeveloperPage() {
           <div className="adv-info-grid">
             <div className="adv-info-item">
               <span className="adv-info-label">Project Title</span>
-              <span className="adv-info-value">Design and Implementation of a Frontend Electoral Result Portal Using React.js and Progressive Web Application Technologies</span>
+              <span className="adv-info-value">Design and Implementation of INEC Result Portal Using React.js and Progressive Web Application Technologies</span>
             </div>
             <div className="adv-info-item">
               <span className="adv-info-label">Project Type</span>
