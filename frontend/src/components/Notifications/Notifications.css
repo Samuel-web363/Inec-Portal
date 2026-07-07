@@ -124,10 +124,6 @@
 }
 .notif-item-time { font-size: 0.72rem; color: var(--grey-400); }
 
-@media (max-width: 480px) {
-  .notif-dropdown {
-    right: 8px;
-    left: 8px;
-    width: auto;
-  }
+@media (max-width: 400px) {
+  .notif-dropdown { width: calc(100vw - 32px); right: -60px; }
 }
