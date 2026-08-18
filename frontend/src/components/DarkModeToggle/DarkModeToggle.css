@@ -522,3 +522,27 @@ html[data-theme="dark"] .ps-check--ok {
 html[data-theme="dark"] .ps-bar-bg {
   background: #2e3330 !important;
 }
+
+/* Candidate/Party active badge */
+html[data-theme="dark"] .cp-status--active,
+html[data-theme="dark"] .pp-status--active {
+  background: rgba(46,125,50,0.35) !important;
+  color: #69f0ae !important;
+}
+
+html[data-theme="dark"] .cp-status--inactive,
+html[data-theme="dark"] .pp-status--inactive {
+  background: rgba(198,40,40,0.2) !important;
+  color: #ef9a9a !important;
+}
+
+/* Sidebar link text */
+html[data-theme="dark"] .sb-link {
+  color: #b8c9c0 !important;
+}
+
+html[data-theme="dark"] .sb-link--active,
+html[data-theme="dark"] .sb-link:hover {
+  color: #dde8e3 !important;
+  background: #2e3330 !important;
+}
