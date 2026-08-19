@@ -447,3 +447,42 @@ html[data-theme="dark"] .cp-active {
   background: rgba(46,125,50,0.3) !important;
   color: #69f0ae !important;
 }
+
+/* Parties page active badge */
+html[data-theme="dark"] .pp-active--yes {
+  background: rgba(46,125,50,0.3) !important;
+  color: #69f0ae !important;
+  border-color: transparent !important;
+}
+
+/* User Management - verified/active/inactive badges */
+html[data-theme="dark"] .um-verified--yes,
+html[data-theme="dark"] .um-active--yes {
+  background: rgba(46,125,50,0.3) !important;
+  color: #69f0ae !important;
+  border-color: transparent !important;
+}
+
+html[data-theme="dark"] .um-active--no,
+html[data-theme="dark"] .um-verified--no,
+html[data-theme="dark"] .um-inactive--yes {
+  background: rgba(198,40,40,0.2) !important;
+  color: #ef9a9a !important;
+  border-color: transparent !important;
+}
+
+/* Activity logs - action badges (white pill badges) */
+html[data-theme="dark"] .alp-badge,
+html[data-theme="dark"] .alp-action-badge {
+  background: #2e3330 !important;
+  color: #dde8e3 !important;
+  border-color: #6b7570 !important;
+}
+
+/* About page - disclaimer banner */
+html[data-theme="dark"] .ab-disclaimer,
+html[data-theme="dark"] .about-disclaimer {
+  background: #242827 !important;
+  border-color: #c9a84c !important;
+  color: #9aa39e !important;
+}
