@@ -436,3 +436,14 @@ html[data-theme="dark"] ::-webkit-scrollbar { width: 8px; height: 8px; }
 html[data-theme="dark"] ::-webkit-scrollbar-track { background: #151817; }
 html[data-theme="dark"] ::-webkit-scrollbar-thumb { background: #2e3330; border-radius: 4px; }
 html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover { background: #6b7570; }
+
+/* Active badge - exact class names from inspector */
+html[data-theme="dark"] .cp-active--yes {
+  background: rgba(46,125,50,0.3) !important;
+  color: #69f0ae !important;
+}
+
+html[data-theme="dark"] .cp-active {
+  background: rgba(46,125,50,0.3) !important;
+  color: #69f0ae !important;
+}
