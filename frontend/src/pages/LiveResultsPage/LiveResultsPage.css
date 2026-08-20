@@ -85,3 +85,30 @@
   .lr-total-num { font-size: 2rem; }
   .lr-content { padding: 16px; }
 }
+
+@media (max-width: 768px) {
+  .lr-charts {
+    grid-template-columns: 1fr !important;
+  }
+  .lr-chart-card {
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+  .lr-chart-card canvas {
+    max-width: 100% !important;
+  }
+  .lr-content {
+    padding: 12px !important;
+  }
+  .lr-table-wrap {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .lr-table {
+    min-width: 500px;
+  }
+  .lr-winner-card {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+}

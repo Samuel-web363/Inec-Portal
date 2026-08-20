@@ -486,3 +486,18 @@ html[data-theme="dark"] .about-disclaimer {
   border-color: #c9a84c !important;
   color: #9aa39e !important;
 }
+
+/* Live results mobile dark mode */
+html[data-theme="dark"] .lr-winner-card,
+html[data-theme="dark"] .lr-section,
+html[data-theme="dark"] .lr-chart-card,
+html[data-theme="dark"] .lr-table-wrap {
+  background: #242827 !important;
+  color: #dde8e3 !important;
+}
+
+html[data-theme="dark"] .lr-winner-name,
+html[data-theme="dark"] .lr-winner-label,
+html[data-theme="dark"] .lr-section-title {
+  color: #dde8e3 !important;
+}
