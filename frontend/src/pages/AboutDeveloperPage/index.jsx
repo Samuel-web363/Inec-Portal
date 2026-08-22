@@ -12,18 +12,31 @@ export default function AboutDeveloperPage() {
         <div className="adv-hero-inner">
           <div className="adv-avatar" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="1.2">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
             </svg>
           </div>
           <h1 className="adv-name">Chinonso Samuel</h1>
           <p className="adv-role">Computer Science Final Year Student</p>
           <p className="adv-school">Department of Computer Science · Faculty of Science</p>
+          <a
+            href="https://samuel-portfolio-nine.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="adv-portfolio-btn"
+          >
+            View My Portfolio
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </a>
         </div>
       </div>
 
       <div className="adv-content">
 
-        {/* Project info */}
         <div className="adv-section">
           <h2 className="adv-section-title">Project Information</h2>
           <div className="adv-info-grid">
@@ -41,17 +54,27 @@ export default function AboutDeveloperPage() {
             </div>
             <div className="adv-info-item">
               <span className="adv-info-label">Inspiration</span>
-              <span className="adv-info-value">INEC Nigeria's IReV (INEC Result Viewing) Portal</span>
+              <span className="adv-info-value">INEC Nigeria IReV (INEC Result Viewing) Portal</span>
+            </div>
+            <div className="adv-info-item">
+              <span className="adv-info-label">Portfolio</span>
+              <a
+                href="https://samuel-portfolio-nine.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="adv-info-link"
+              >
+                samuel-portfolio-nine.vercel.app
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Objectives */}
         <div className="adv-section">
           <h2 className="adv-section-title">Project Objectives</h2>
           <ul className="adv-list">
             {[
-              'Design a responsive, accessible web portal simulating INEC\'s electoral result viewing system',
+              'Design a responsive, accessible web portal simulating INEC electoral result viewing system',
               'Implement secure authentication with JWT and two-factor email OTP verification',
               'Build role-based access control distinguishing between administrators and public users',
               'Develop a result management system supporting upload, filtering, and verification',
@@ -67,7 +90,6 @@ export default function AboutDeveloperPage() {
           </ul>
         </div>
 
-        {/* Tech stack */}
         <div className="adv-section">
           <h2 className="adv-section-title">Technology Stack</h2>
           <div className="adv-tech-grid">
@@ -82,7 +104,7 @@ export default function AboutDeveloperPage() {
               { name: 'MongoDB', desc: 'Database', cat: 'Backend' },
               { name: 'Mongoose', desc: 'ODM library', cat: 'Backend' },
               { name: 'JWT', desc: 'Authentication', cat: 'Backend' },
-              { name: 'Nodemailer', desc: 'Email service', cat: 'Backend' },
+              { name: 'Brevo SMTP', desc: 'Email service', cat: 'Backend' },
               { name: 'bcryptjs', desc: 'Password hashing', cat: 'Backend' }
             ].map(t => (
               <div className="adv-tech-card" key={t.name}>
@@ -94,16 +116,16 @@ export default function AboutDeveloperPage() {
           </div>
         </div>
 
-        {/* Acknowledgements */}
         <div className="adv-section adv-section--accent">
           <h2 className="adv-section-title">Acknowledgements</h2>
           <p className="adv-ack-text">
-            This project was developed as part of the requirements for the award of a Bachelor's degree in Computer Science. Special appreciation goes to the project supervisor for their guidance, and to the Department of Computer Science for the opportunity to work on this capstone project.
+            This project was developed as part of the requirements for the award of a Bachelor degree in Computer Science. Special appreciation goes to the project supervisor for their guidance, and to the Department of Computer Science for the opportunity to work on this capstone project.
           </p>
           <p className="adv-ack-text">
             This portal is purely an academic demonstration. It is not affiliated with, endorsed by, or representative of the Independent National Electoral Commission (INEC) of Nigeria. All data displayed is either historical (sourced from public records) or simulated for demonstration purposes.
           </p>
         </div>
+
       </div>
 
       <Footer />

@@ -465,3 +465,29 @@ html[data-theme="dark"] ::-webkit-scrollbar { width: 8px; height: 8px; }
 html[data-theme="dark"] ::-webkit-scrollbar-track { background: #151817; }
 html[data-theme="dark"] ::-webkit-scrollbar-thumb { background: #2e3330; border-radius: 4px; }
 html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover { background: #6b7570; }
+
+.adv-portfolio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 20px;
+  background: var(--gold);
+  color: #1a1a1a;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 14px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.adv-portfolio-btn:hover { opacity: 0.85; }
+
+.adv-info-link {
+  color: var(--green-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.adv-info-link:hover { opacity: 0.8; }
