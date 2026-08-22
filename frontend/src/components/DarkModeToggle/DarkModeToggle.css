@@ -13,7 +13,7 @@
 .dmt-btn:hover { background: rgba(255,255,255,0.22); }
 .dmt-btn--dark { background: rgba(255,255,255,0.2); }
 
-/* ===== DARK THEME — SINGLE CLEAN BLOCK ===== */
+/* ===== DARK THEME ===== */
 html[data-theme="dark"] {
   --white:      #1c1f1e;
   --off-white:  #151817;
@@ -43,7 +43,6 @@ html[data-theme="dark"] h6 {
   color: #dde8e3 !important;
 }
 
-/* Global text override — catches hardcoded colors in component CSS */
 html[data-theme="dark"] p,
 html[data-theme="dark"] span:not([class*="nav-"]):not([class*="ft-"]):not([class*="gold"]),
 html[data-theme="dark"] label,
@@ -78,7 +77,7 @@ html[data-theme="dark"] .ae-page {
   color: #dde8e3 !important;
 }
 
-/* Cards & white-background sections */
+/* Cards & white sections */
 html[data-theme="dark"] .sc-card,
 html[data-theme="dark"] .cc-card,
 html[data-theme="dark"] .ad-section,
@@ -116,6 +115,7 @@ html[data-theme="dark"] .sd-nav,
 html[data-theme="dark"] .sd-role-card,
 html[data-theme="dark"] .sd-api-table,
 html[data-theme="dark"] .sd-model,
+html[data-theme="dark"] .sd-field,
 html[data-theme="dark"] .vc-card,
 html[data-theme="dark"] .vc-info,
 html[data-theme="dark"] .vc-usage,
@@ -127,7 +127,12 @@ html[data-theme="dark"] .ud-welcome,
 html[data-theme="dark"] .adv-tech-card,
 html[data-theme="dark"] .adv-info-item,
 html[data-theme="dark"] .prof-edit-card,
-html[data-theme="dark"] .hp-stats {
+html[data-theme="dark"] .hp-stats,
+html[data-theme="dark"] .hp-result-card,
+html[data-theme="dark"] .otp-modal,
+html[data-theme="dark"] .cp-modal,
+html[data-theme="dark"] .pp-modal,
+html[data-theme="dark"] .ae-modal {
   background: #242827 !important;
   border-color: #2e3330 !important;
   color: #dde8e3 !important;
@@ -138,9 +143,7 @@ html[data-theme="dark"] .sb-sidebar {
   background: #1c1f1e !important;
   border-color: #2e3330 !important;
 }
-html[data-theme="dark"] .sb-link {
-  color: #b8c9c0 !important;
-}
+html[data-theme="dark"] .sb-link { color: #b8c9c0 !important; }
 html[data-theme="dark"] .sb-link:hover,
 html[data-theme="dark"] .sb-link--active {
   background: #2e3330 !important;
@@ -156,9 +159,7 @@ html[data-theme="dark"] .um-table,
 html[data-theme="dark"] .alp-table,
 html[data-theme="dark"] .res-table,
 html[data-theme="dark"] .lr-table,
-html[data-theme="dark"] .an-table {
-  background: #242827 !important;
-}
+html[data-theme="dark"] .an-table { background: #242827 !important; }
 html[data-theme="dark"] tbody tr { border-bottom-color: #2e3330 !important; }
 html[data-theme="dark"] tbody tr:hover { background: #2e3330 !important; }
 html[data-theme="dark"] tbody td { color: #dde8e3 !important; }
@@ -178,14 +179,7 @@ html[data-theme="dark"] textarea::placeholder { color: #6b7570 !important; }
 html[data-theme="dark"] input:focus,
 html[data-theme="dark"] textarea:focus { border-color: #006400 !important; }
 
-/* Modals */
-html[data-theme="dark"] .otp-modal,
-html[data-theme="dark"] .cp-modal,
-html[data-theme="dark"] .pp-modal,
-html[data-theme="dark"] .ae-modal {
-  background: #242827 !important;
-  color: #dde8e3 !important;
-}
+/* OTP inputs */
 html[data-theme="dark"] .otp-input {
   background: #2e3330 !important;
   border-color: #6b7570 !important;
@@ -209,7 +203,7 @@ html[data-theme="dark"] .gs-view-all { background: #2e3330 !important; color: #6
 html[data-theme="dark"] .gs-dropdown--empty { color: #9aa39e !important; background: #1c1f1e !important; }
 html[data-theme="dark"] .notif-title { color: #dde8e3 !important; }
 html[data-theme="dark"] .notif-item-msg { color: #dde8e3 !important; }
-html[data-theme="dark"] .notif-item-time { color: #6b7570 !important; }
+html[data-theme="dark"] .notif-item-time,
 html[data-theme="dark"] .notif-clear { color: #6b7570 !important; }
 html[data-theme="dark"] .notif-header { border-bottom-color: #2e3330 !important; background: #1c1f1e !important; }
 html[data-theme="dark"] .notif-empty { color: #6b7570 !important; }
@@ -218,7 +212,6 @@ html[data-theme="dark"] .notif-empty { color: #6b7570 !important; }
 html[data-theme="dark"] .hp-features { background: #1c1f1e !important; }
 html[data-theme="dark"] .hp-feat-card { background: #242827 !important; border-color: #2e3330 !important; }
 html[data-theme="dark"] .hp-stat-item { border-right-color: #2e3330 !important; }
-html[data-theme="dark"] .hp-result-card { background: #242827 !important; border-color: #2e3330 !important; }
 html[data-theme="dark"] .hp-results-section { background: #151817 !important; }
 
 /* Pagination */
@@ -237,7 +230,7 @@ html[data-theme="dark"] .sc-value { color: #dde8e3 !important; }
 html[data-theme="dark"] .sc-label { color: #9aa39e !important; }
 html[data-theme="dark"] .sc-trend { color: #69f0ae !important; }
 
-/* Chart cards */
+/* Chart titles */
 html[data-theme="dark"] .cc-title,
 html[data-theme="dark"] .an-chart-title,
 html[data-theme="dark"] .an-section-title,
@@ -245,7 +238,7 @@ html[data-theme="dark"] .ad-section-title,
 html[data-theme="dark"] .ud-section-title { color: #dde8e3 !important; }
 html[data-theme="dark"] .cc-bar { background: linear-gradient(90deg, #006400, #69f0ae) !important; }
 
-/* Badges */
+/* Party/result badges */
 html[data-theme="dark"] .res-party-badge,
 html[data-theme="dark"] .an-party-tag,
 html[data-theme="dark"] .lr-party-tag {
@@ -255,22 +248,57 @@ html[data-theme="dark"] .lr-party-tag {
 html[data-theme="dark"] .res-status--verified { background: rgba(46,125,50,0.25) !important; color: #69f0ae !important; }
 html[data-theme="dark"] .res-status--pending { background: rgba(245,127,23,0.2) !important; color: #ffb74d !important; }
 html[data-theme="dark"] .ad-status--ok { background: rgba(46,125,50,0.25) !important; color: #69f0ae !important; }
-html[data-theme="dark"] .ad-status--pending { background: rgba(245,127,23,0.2) !important; color: #ffb74d !important; }
 html[data-theme="dark"] .ad-badge { background: rgba(0,100,0,0.3) !important; color: #69f0ae !important; }
 
-/* Candidate/Party active tags */
-html[data-theme="dark"] .cp-status--active,
-html[data-theme="dark"] .pp-status--active,
-html[data-theme="dark"] .cp-active-tag,
-html[data-theme="dark"] .pp-active-tag {
+/* Candidate active badge — confirmed from inspector: cp-active cp-active--yes */
+html[data-theme="dark"] .cp-active,
+html[data-theme="dark"] .cp-active--yes {
   background: rgba(46,125,50,0.3) !important;
   color: #69f0ae !important;
-  border-color: rgba(105,240,174,0.3) !important;
+  border-color: transparent !important;
 }
-html[data-theme="dark"] .cp-status--inactive,
-html[data-theme="dark"] .pp-status--inactive {
+
+/* Party active badge — same pattern as candidates */
+html[data-theme="dark"] .pp-active,
+html[data-theme="dark"] .pp-active--yes {
+  background: rgba(46,125,50,0.3) !important;
+  color: #69f0ae !important;
+  border-color: transparent !important;
+}
+
+/* User management badges — cover all possible class name patterns */
+html[data-theme="dark"] .um-verified--yes,
+html[data-theme="dark"] .um-active--yes,
+html[data-theme="dark"] .um-verified,
+html[data-theme="dark"] .um-active {
+  background: rgba(46,125,50,0.3) !important;
+  color: #69f0ae !important;
+  border-color: transparent !important;
+}
+html[data-theme="dark"] .um-verified--no,
+html[data-theme="dark"] .um-active--no,
+html[data-theme="dark"] .um-inactive {
   background: rgba(198,40,40,0.2) !important;
   color: #ef9a9a !important;
+  border-color: transparent !important;
+}
+
+/* Activity log action badges */
+html[data-theme="dark"] .alp-badge,
+html[data-theme="dark"] .alp-action-badge,
+html[data-theme="dark"] .alp-action-tag {
+  background: #2e3330 !important;
+  color: #dde8e3 !important;
+  border-color: #6b7570 !important;
+}
+
+/* About page disclaimer */
+html[data-theme="dark"] .ab-disclaimer,
+html[data-theme="dark"] .ab-notice,
+html[data-theme="dark"] .about-disclaimer {
+  background: #242827 !important;
+  border-color: #c9a84c !important;
+  color: #9aa39e !important;
 }
 
 /* Results filter */
@@ -288,7 +316,7 @@ html[data-theme="dark"] .res-card-votes-label { color: #6b7570 !important; }
 html[data-theme="dark"] .an-bar { background: #2e3330 !important; }
 html[data-theme="dark"] .lr-progress-bar { background: #2e3330 !important; }
 
-/* Election cards */
+/* Elections */
 html[data-theme="dark"] .el-type-tag { background: #2e3330 !important; color: #9aa39e !important; }
 html[data-theme="dark"] .el-card-title { color: #dde8e3 !important; }
 html[data-theme="dark"] .el-card-desc { color: #9aa39e !important; }
@@ -310,6 +338,7 @@ html[data-theme="dark"] .lr-pct { color: #9aa39e !important; }
 html[data-theme="dark"] .lr-rank { color: #6b7570 !important; }
 html[data-theme="dark"] .lr-section-title { color: #dde8e3 !important; }
 html[data-theme="dark"] .lr-refresh-btn { background: #242827 !important; border-color: #2e3330 !important; color: #9aa39e !important; }
+html[data-theme="dark"] .lr-table-wrap { background: #242827 !important; }
 
 /* Voting page */
 html[data-theme="dark"] .vp-candidate-name { color: #dde8e3 !important; }
@@ -436,68 +465,3 @@ html[data-theme="dark"] ::-webkit-scrollbar { width: 8px; height: 8px; }
 html[data-theme="dark"] ::-webkit-scrollbar-track { background: #151817; }
 html[data-theme="dark"] ::-webkit-scrollbar-thumb { background: #2e3330; border-radius: 4px; }
 html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover { background: #6b7570; }
-
-/* Active badge - exact class names from inspector */
-html[data-theme="dark"] .cp-active--yes {
-  background: rgba(46,125,50,0.3) !important;
-  color: #69f0ae !important;
-}
-
-html[data-theme="dark"] .cp-active {
-  background: rgba(46,125,50,0.3) !important;
-  color: #69f0ae !important;
-}
-
-/* Parties page active badge */
-html[data-theme="dark"] .pp-active--yes {
-  background: rgba(46,125,50,0.3) !important;
-  color: #69f0ae !important;
-  border-color: transparent !important;
-}
-
-/* User Management - verified/active/inactive badges */
-html[data-theme="dark"] .um-verified--yes,
-html[data-theme="dark"] .um-active--yes {
-  background: rgba(46,125,50,0.3) !important;
-  color: #69f0ae !important;
-  border-color: transparent !important;
-}
-
-html[data-theme="dark"] .um-active--no,
-html[data-theme="dark"] .um-verified--no,
-html[data-theme="dark"] .um-inactive--yes {
-  background: rgba(198,40,40,0.2) !important;
-  color: #ef9a9a !important;
-  border-color: transparent !important;
-}
-
-/* Activity logs - action badges (white pill badges) */
-html[data-theme="dark"] .alp-badge,
-html[data-theme="dark"] .alp-action-badge {
-  background: #2e3330 !important;
-  color: #dde8e3 !important;
-  border-color: #6b7570 !important;
-}
-
-/* About page - disclaimer banner */
-html[data-theme="dark"] .ab-disclaimer,
-html[data-theme="dark"] .about-disclaimer {
-  background: #242827 !important;
-  border-color: #c9a84c !important;
-  color: #9aa39e !important;
-}
-
-/* Live results mobile dark mode */
-html[data-theme="dark"] .lr-winner-card,
-html[data-theme="dark"] .lr-section,
-html[data-theme="dark"] .lr-chart-card,
-html[data-theme="dark"] .lr-table-wrap {
-  background: #242827 !important;
-  color: #dde8e3 !important;
-}
-
-html[data-theme="dark"] .lr-winner-name,
-html[data-theme="dark"] .lr-winner-label,
-html[data-theme="dark"] .lr-section-title {
-  color: #dde8e3 !important;
-}
