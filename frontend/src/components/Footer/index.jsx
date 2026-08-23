@@ -1,8 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { isAuthenticated, getCurrentUser } from '../../api/auth'
 import './Footer.css'
 
 export default function Footer() {
+  const auth = isAuthenticated()
+  const user = getCurrentUser()
+
   return (
     <footer className="ft-footer" role="contentinfo">
 
@@ -56,8 +60,17 @@ export default function Footer() {
             <ul className="ft-link-list">
               <li><Link to="/candidates">Candidates</Link></li>
               <li><Link to="/parties">Political Parties</Link></li>
-              <li><Link to="/login">Login</Link></li>
-              <li><Link to="/register">Register</Link></li>
+              {auth ? (
+                <>
+                  <li><Link to={user?.role === 'admin' ? '/admin/dashboard' : '/dashboard'}>Dashboard</Link></li>
+                  <li><Link to="/profile">My Profile</Link></li>
+                </>
+              ) : (
+                <>
+                  <li><Link to="/login">Login</Link></li>
+                  <li><Link to="/register">Register</Link></li>
+                </>
+              )}
               <li><Link to="/docs">System Documentation</Link></li>
               <li><Link to="/about-developer">About Developer</Link></li>
             </ul>

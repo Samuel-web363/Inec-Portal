@@ -1,10 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
-import './AboutPage.css'
 import Footer from '../../components/Footer'
+import { isAuthenticated, getCurrentUser } from '../../api/auth'
+import './AboutPage.css'
 
 export default function AboutPage() {
+  const auth = isAuthenticated()
+  const user = getCurrentUser()
+
   return (
     <div className="ab-page">
       <Navbar />
@@ -58,7 +62,7 @@ export default function AboutPage() {
             <div className="ab-tech-grid">
               {[
                 { cat: 'Frontend', items: ['React.js (Vite)', 'React Router v6', 'Chart.js / react-chartjs-2', 'Custom CSS (no Tailwind)', 'Axios'] },
-                { cat: 'Backend', items: ['Node.js + Express.js', 'MongoDB + Mongoose', 'JWT Authentication', 'Nodemailer (OTP)', 'bcryptjs'] },
+                { cat: 'Backend', items: ['Node.js + Express.js', 'MongoDB + Mongoose', 'JWT Authentication', 'Brevo SMTP (OTP)', 'bcryptjs'] },
                 { cat: 'Deployment', items: ['Vercel (Frontend)', 'Render (Backend)', 'MongoDB Atlas (Database)'] },
                 { cat: 'PWA', items: ['vite-plugin-pwa', 'Service Worker', 'Offline caching', 'Web App Manifest'] }
               ].map(group => (
@@ -84,7 +88,7 @@ export default function AboutPage() {
                 { step: '1', title: 'Create an Account', desc: 'Register with your name, email, NIN, and password. Verify your email via the OTP sent to your inbox.' },
                 { step: '2', title: 'Log In Securely', desc: 'Log in with your credentials. A second OTP is sent for login verification, ensuring two-factor security.' },
                 { step: '3', title: 'Browse Results', desc: 'Access the Results page to view all uploaded election results. Use filters to narrow by state, LGA, party, or candidate.' },
-                { step: '4', title: 'View Analytics', desc: 'Your dashboard shows charts and statistics — including votes per party, results by state, and upload timelines.' }
+                { step: '4', title: 'View Analytics', desc: 'Your dashboard shows charts and statistics including votes per party, results by state, and upload timelines.' }
               ].map(s => (
                 <div className="ab-step" key={s.step}>
                   <div className="ab-step-num" aria-hidden="true">{s.step}</div>
@@ -99,20 +103,32 @@ export default function AboutPage() {
         </div>
 
         <div className="ab-cta">
-          <h2 className="ab-cta-title">Ready to get started?</h2>
-          <p className="ab-cta-sub">Create a free account to access the full portal</p>
+          <h2 className="ab-cta-title">
+            {auth ? `Welcome back, ${user?.fullName?.split(' ')[0] || 'User'}!` : 'Ready to get started?'}
+          </h2>
+          <p className="ab-cta-sub">
+            {auth ? 'Continue exploring the portal' : 'Create a free account to access the full portal'}
+          </p>
           <div className="ab-cta-btns">
-            <Link to="/register" className="ab-cta-primary">Create Account</Link>
-            <Link to="/results" className="ab-cta-secondary">View Results</Link>
+            {auth ? (
+              <>
+                <Link to={user?.role === 'admin' ? '/admin/dashboard' : '/dashboard'} className="ab-cta-primary">
+                  Go to Dashboard
+                </Link>
+                <Link to="/elections" className="ab-cta-secondary">
+                  Vote Now — 2027
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/register" className="ab-cta-primary">Create Account</Link>
+                <Link to="/results" className="ab-cta-secondary">View Results</Link>
+              </>
+            )}
           </div>
         </div>
       </div>
 
-      <footer className="ab-footer">
-        <div className="ab-footer-inner">
-          <p>&copy; {new Date().getFullYear()} IReV Portal — Student Demonstration Project &nbsp;|&nbsp; Computer Science Final Year Project</p>
-        </div>
-      </footer>
       <Footer />
     </div>
   )
